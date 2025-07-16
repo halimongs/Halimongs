@@ -1,16 +1,184 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A. Halim Sappaile - Profil</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-<!--
-**halimongs/Halimongs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-Here are some ideas to get you started:
+    html, body {
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    header {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: #111;
+      border-bottom: 1px solid #333;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      animation: slideDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2em;
+      letter-spacing: 2px;
+      color: #e50914;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .photo {
+      flex: 1 1 300px;
+      text-align: center;
+      animation: scaleIn 2s ease;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #e50914;
+      transition: transform 0.5s;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .info {
+      flex: 1 1 400px;
+      padding: 20px;
+      animation: slideUp 2s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .info h2 {
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e50914;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .label {
+      color: #aaa;
+      font-size: 0.95em;
+      margin-top: 15px;
+    }
+
+    .value {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #e50914;
+    }
+
+    .bio {
+      margin-top: 20px;
+      font-size: 1em;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      border-top: 1px solid #333;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding-top: 120px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      .info h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>A. HALIM SAPPAILE</h1>
+  </header>
+
+  <div class="hero">
+    <div class="photo">
+      <img src="foto-profil.jpg" alt="Foto Profil">
+    </div>
+    <div class="info">
+      <h2>Data Diri</h2>
+
+      <div class="label">Nama Lengkap</div>
+      <div class="value">A. Halim Sappaile</div>
+
+      <div class="label">Tanggal Lahir</div>
+      <div class="value">16 Februari 2001</div>
+
+      <div class="label">Alamat</div>
+      <div class="value">Makassar</div>
+
+      <div class="label">Email</div>
+      <div class="value">andihalim1618@gmail.com</div>
+
+      <p class="bio">
+        Mahasiswa Teknik Sipil yang tertarik pada perencanaan jalan, dan Bangunan gedung. Gemar eksplorasi lapangan dan berdiskusi tentang infrastruktur.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 A. Halim Sappaile | Dibuat dengan ❤️
+  </footer>
+
+</body>
+</html>
